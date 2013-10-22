@@ -26,8 +26,8 @@ Our (future) files will now be viewable at [http://localhost:3000](http://localh
 
 > Note: If you are uncomfortable with using the terminal. You can use one of the apps below to quickly startup a local web server:
 >
-> * Mac: Simple HTTP Server
-> * Windows: QuickShare
+> * Mac: [Simple HTTP Server](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12)
+> * Windows: [QuickShare](http://www.quicksharehq.com/)
 
 ## Boilerplate
 
