@@ -37,7 +37,7 @@ First, lets start off with some boilerplate HTML. Angular is included just befor
 
 **index.html**
 
-```
+```html
   <!DOCTYPE html>
   <html>
     <head>
