@@ -16,7 +16,7 @@ If you'd like to follow along with the full code, checkout the [tutorial's repos
 
 Before we get started we will need to run our demo through a local web server. Open up your terminal and type:
 
-```
+```bash
   mkdir angularDemo
   cd angularDemo
   python -m SimpleHTTPServer 3000
@@ -66,7 +66,7 @@ Now, lets call our app `myApp` by setting the value of the `data-ng-app` attribu
 
 **index.html**
 
-```
+```html
   <html data-ng-app="myApp">
   ...
 ```
@@ -75,7 +75,7 @@ Finally, lets set up an area where we can easily swap out content. Angular calls
 
 **index.html**
 
-```
+```html
   ...
   <div class="container">
     <div data-ng-view></div>
@@ -89,7 +89,7 @@ Now that Angular knows where it will exist within our template, lets actually in
 
 **js/app.js**
 
-```
+```javascript
   var myApp = angular.module('myApp', []);
 ```
 
@@ -97,7 +97,7 @@ Angular is now ready to go, but we need to tell it what to do when we want to go
 
 **js/app.js**
 
-```
+```javascript
   ...
 
   myApp.config(function ($routeProvider) {
@@ -117,7 +117,7 @@ When a specific route *(url)* is requested, load an HTML file to be dumped into 
 
 Finally, lets add this script to our main `index.html` file just before the closing `body` tag:
 
-```
+```html
   ...
       <script src="js/app.js"></script>
     </body>
@@ -130,7 +130,7 @@ We’re almost there! Now we just need to create the `welcome.html` & `about.htm
 
 **views/welcome.html**
 
-```
+```html
   <h1>Home Page</h1>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
   <p>Laboriosam, nihil, placeat, nesciunt expedita doloremque</p>
@@ -138,7 +138,7 @@ We’re almost there! Now we just need to create the `welcome.html` & `about.htm
 
 **views/about.html**
 
-```
+```html
   <h1>About Us</h1>
   <p>Tempora repudiandae impedit corrupti.</p>
 ```
@@ -147,7 +147,7 @@ Finally, lets create a simple navigation menu to travel through our little websi
 
 **index.html**
 
-```
+```html
   ...
     <ul class="nav nav-tabs">
       <li><a href="#">Home</a></li>
