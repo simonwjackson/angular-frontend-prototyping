@@ -16,9 +16,11 @@ If you'd like to follow along with the full code, checkout the [tutorial's repos
 
 Before we get started we will need to run our demo through a local web server. Open up your terminal and type:
 
+```
   mkdir angularDemo
   cd angularDemo
   python -m SimpleHTTPServer 3000
+```
 
 Our (future) files will now be viewable at [http://localhost:3000](http://localhost:3000)
 
@@ -33,8 +35,9 @@ First, lets start off with some boilerplate HTML. Angular is included just befor
 
 > Note: I have also included bootstrap so that we have some sane styling for this demo but it is not required to use with angular.
 
-index.html
+**index.html**
 
+```
   <!DOCTYPE html>
   <html>
     <head>
@@ -51,7 +54,7 @@ index.html
       <script src=”//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js”></script>
     </body>
   </html>
-
+```
 
 ## Angular Setup
 
@@ -63,18 +66,22 @@ Now, lets call our app `myApp` by setting the value of the `data-ng-app` attribu
 
 **index.html**
 
+```
   <html data-ng-app="myApp">
   ...
+```
 
 Finally, lets set up an area where we can easily swap out content. Angular calls these sections views, and we can enable this by setting the `data-ng-view` attribute to the tag of our choice.
 
 **index.html**
 
+```
   ...
   <div class="container">
     <div data-ng-view></div>
   </div>
   ...
+```
 
 #### Javascript
 
@@ -82,12 +89,15 @@ Now that Angular knows where it will exist within our template, lets actually in
 
 **js/app.js**
 
+```
   var myApp = angular.module('myApp', []);
+```
 
 Angular is now ready to go, but we need to tell it what to do when we want to go to a page. Next, lets tell angular what we want to show when we visit various areas of the website:
 
 **js/app.js**
 
+```
   ...
 
   myApp.config(function ($routeProvider) {
@@ -99,6 +109,7 @@ Angular is now ready to go, but we need to tell it what to do when we want to go
         templateUrl: ‘views/about.html’
       });
   });
+```
 
 The code above is pretty self explanitory:
 
@@ -106,10 +117,12 @@ When a specific route *(url)* is requested, load an HTML file to be dumped into 
 
 Finally, lets add this script to our main `index.html` file just before the closing `body` tag:
 
+```
   ...
       <script src="js/app.js"></script>
     </body>
-    ...
+  ...
+```
 
 ## Templates
 
@@ -117,19 +130,24 @@ We’re almost there! Now we just need to create the `welcome.html` & `about.htm
 
 **views/welcome.html**
 
+```
   <h1>Home Page</h1>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
   <p>Laboriosam, nihil, placeat, nesciunt expedita doloremque</p>
+```
 
 **views/about.html**
 
+```
   <h1>About Us</h1>
   <p>Tempora repudiandae impedit corrupti.</p>
+```
 
 Finally, lets create a simple navigation menu to travel through our little website. Because we want our navigation to be global (on every page) we will place it outside of our view element `<div data-ng-view>`
 
 **index.html**
 
+```
   ...
     <ul class="nav nav-tabs">
       <li><a href="#">Home</a></li>
@@ -137,6 +155,7 @@ Finally, lets create a simple navigation menu to travel through our little websi
     </ul>
     <div data-ng-view></div>
   ...
+```
 
 **Important**: Notice that angular uses the hashtag (#) to call our routes
 
