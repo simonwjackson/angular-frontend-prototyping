@@ -1,3 +1,5 @@
+![Quick Frontend Prototyping with AngularJS](http://i.imgur.com/YXnwUcd.jpg "Quick Frontend Prototyping with AngularJS")
+
 # Quick Frontend Prototyping with AngularJS: Basics
 
 If you have ever created templates from a design for a large website, you know how difficult it can be to keep some pieces (such as a global navigation) consistent across hundreds of files. [DRY!](http://en.wikipedia.org/wiki/Don't_repeat_yourself) (Don’t Repeat Yourself). Instead, we should have an environment setup to place these components for us no matter how many times we need to change them.
