@@ -102,11 +102,11 @@ Angular is now ready to go, but we need to tell it what to do when we want to go
 
   myApp.config(function ($routeProvider) {
     $routeProvider
-      .when(‘/’, {
-        templateUrl: ‘views/welcome.html’
+      .when('/', {
+        templateUrl: 'views/welcome.html'
       })
-      .when(‘/about’, {
-        templateUrl: ‘views/about.html’
+      .when('/about', {
+        templateUrl: 'views/about.html'
       });
   });
 ```
