@@ -168,3 +168,7 @@ We now have a fully functional prototype for our website. If we visit [http://lo
 Check back next week for another lesson in prototyping with Angular. And as always, if you have any questions, comments or suggestions, please let us know in the comments section below.
 
 Happy Coding!
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/simonwjackson/angular-frontend-prototyping/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
